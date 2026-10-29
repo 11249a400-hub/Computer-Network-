@@ -1,7 +1,6 @@
 8:Experiment: Simulation of TCP and UDP using NS2
  
 # File name: tcp_udp.tcl
-# -------------------------------------------------------
 
 # Step 1: Create a new simulator
 set ns [new Simulator]
@@ -118,9 +117,7 @@ $cbr set random_ false
 # Attach CBR application to UDP agent
 $cbr attach-agent $udp
 
-# -------------------------------------------------------
 # Step 12: Schedule TCP and UDP traffic
-# -------------------------------------------------------
 
 # Start TCP traffic at 0.5 seconds
 $ns at 0.5 "$ftp start"
@@ -137,9 +134,7 @@ $ns at 4.5 "$ftp stop"
 # Finish simulation at 5.0 seconds
 $ns at 5.0 "finish"
 
-# -------------------------------------------------------
 # Step 13: Start the simulation
-# -------------------------------------------------------
 
 puts "Starting TCP and UDP simulation..."
 $ns run
